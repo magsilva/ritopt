@@ -1,0 +1,125 @@
+Copyright (C) Damian Ryan Eads, 2001. All Rights Reserved.
+
+ritopt is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published
+by the Free Software Foundation; either version 2 of the License,
+or (at your option) any later version.
+
+ritopt is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with ritopt; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+
+-------------------------------------------------------------------------
+ritopt Java Class Library README         Written by Damian Eads
+
+	1. Installation
+
+	1.1 Extracting the Source
+
+	    First, the source must be extracted by executing the following
+	    at the shell prompt:
+
+	       gzip -cd your_downloaded_file.tar.gz | tar xvf -
+
+	1.2 Preparing the Build Environment
+
+	   * By default, a configure script is provided with ritopt. If
+	     you would like to make modifications to configure.in
+	     then you must execute the following at the command prompt.
+
+	        ./autogen.sh
+
+	   * Configure the build environment by executing the configure
+	     script.
+
+	        ./configure
+
+	   * Optionally, you may specify a different install location
+	     by using the --prefix option.
+
+	        ./configure --prefix=<MY INSTALL DIRECTORY>
+
+	1.3 Compiling ritopt.
+
+	   * Compiling ritopt is straight-forward, you must perform "make".
+
+	        make
+
+	   * If you would like to install the compiled source and jar
+	     into your $(PREFIX)/lib/ritopt then you need to do a
+	     "make install". The default PREFIX is /usr/$(CONFIG_GUESS)
+
+	        make install
+
+	1.4 Adjusting your CLASSPATH
+
+	   * In order to use ritopt you must point your CLASSPATH to the
+	     installed jar file.
+
+	     For C Shell users, edit your .cshrc file and add the following
+	     line:
+
+		setenv CLASSPATH <YOUR PREFIX>/lib/ritopt.jar:$CLASSPATH
+
+	     For bash Shell users, modify your .bashrc file and add the 
+
+		export CLASSPATH=<YOUR PREFIX>/lib/ritopt.jar:$CLASSPATH
+
+	1.5 You're all set!
+
+	   * If you followed these steps without error, then great!
+
+	2. Using ritopt.
+
+	   * A comprehensive tutorial is provided with this package. The
+	   text version is available by opening ritopt. tex, dvi, html,
+	   ps, and pdf versions are available by visiting
+	   http://ritopt.sourceforge.net
+
+	   * Complete API documentation should have been installed in your
+	   <YOUR PREFIX>/doc directory. This documentation is in
+	   html format. Open the index.html file for a complete indexed API
+	   reference.
+
+	   * If you chose not to install the API documentation, the
+	   documentation is available at http://ritopt.sourceforge.net for
+	   viewing or download.
+
+	3. Why did you write ritopt?
+
+	3.1 I reinvented the wheel too much.
+
+	   * I found that I wrote option processing code for every program
+	     I wrote. Rather than reinventing the wheel every time, I decided
+	     to write a package.
+
+	3.2 Another popular package seemed to have a good design.
+
+	   * As an undergraduate at R.I.T., I co-op'ed at Los Alamos National
+	     Laboratory. Most of the software I wrote was implemented both
+	     in C and C++, and was parameterized by a plethora of options.
+	     A friend noticed I was using getopt, and recommended that I use
+	     opt written by another fellow employee, James Theiler. I found
+	     opt to be very easy to use. I liked the library so much, I
+	     decided to port it to Java.
+
+	3.3 Boredom
+
+	     * Okay, so I needed some more motivation.
+
+	4. Predicted Frequently Asked Questions
+
+	4.1 Where do I send suggestions, praise, or complaints?
+
+	     * Feel free to contact me at googolminex@users.sourceforge.net.
+
+	4.2 Where can I acquire versions for other languages?
+
+	     * Visit http://nis-www.lanl.gov/~jt/Software to download the
+	     C, C++, or PERL versions.
